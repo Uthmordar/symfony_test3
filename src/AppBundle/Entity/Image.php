@@ -98,7 +98,11 @@ class Image
         $this->setDateCreated(new \Datetime());
         $this->setDateModified(new \Datetime());
         
-        $this->getFile()->move(__DIR__ . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . "web" . DIRECTORY_SEPARATOR . "uploads" . DIRECTORY_SEPARATOR . "originals", $this->getFilename());
+        $this->getFile()->move($this->getPathToImages('originals'), $this->getFilename());
+    }
+    
+    public function getPathToImages($rep){
+        return __DIR__ . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . "web" . DIRECTORY_SEPARATOR . "uploads" . DIRECTORY_SEPARATOR . $rep;
     }
 
     /**

@@ -25,6 +25,8 @@ class ImageController extends Controller{
             $em->persist($image);
             
             $em->flush();
+            
+            $this->get('image_resizer')->generateImages($image);
         }
         
         $params=[
@@ -34,4 +36,3 @@ class ImageController extends Controller{
         return $this->render('image/create.html.twig', $params);
     }
 }
-
