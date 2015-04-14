@@ -1,2 +1,5 @@
-My translations: Mes traductions
-Yo dude: wesh frère
+translations.page:
+    title: Mes traductions
+    p: wesh frère %name%
+upload.label.tempFile: Votre image
+post.number: %count% article trouvé|%count% articles trouvés

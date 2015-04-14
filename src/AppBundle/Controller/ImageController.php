@@ -40,6 +40,9 @@ class ImageController extends Controller{
      * @Route("/translate", name="translate")
      */
     public function tradPage(){
-         return $this->render('default/index.html.twig'); 
+        $customEvent=new \AppBundle\Event\CustomEvent("boum");
+        $this->get('event_dispatcher')->dispatch("custom.test_event", $customEvent);
+        
+        return $this->render('default/index.html.twig'); 
     }
 }

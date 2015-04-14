@@ -1,0 +1,5 @@
+translations.page:
+    title: My traductions
+    p: Yo dude %name%
+upload.label.tempFile: Your image
+post.number: %count% post found|%count% posts found

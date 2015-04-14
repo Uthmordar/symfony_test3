@@ -10,3 +10,12 @@ services:
     image_resizer:
         class: AppBundle\Services\ImageResizer
         arguments: []
+    test_listener:
+        class: AppBundle\Listener\TestListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.response, method: yo }
+    custom_listener:
+        class: AppBundle\Listener\CustomListener
+        tags:
+            - { name: kernel.event_listener, event: custom.test_event, method: customHandler }
+    

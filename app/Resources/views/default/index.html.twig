@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h2>{{"My translations" | trans }}</h2>
-    <p>{{"Yo dude"|trans}}</p>
+    <h2>{{"translations.page.title" | trans }}</h2>
+    <p>{{"translations.page.p"|trans({'%name%': "toto"})}}</p>
+    {{"post.number"|transchoice(3)}}
+    <a href="{{url('translate', {"_locale": 'fr'})}}">dazdzad</a>
 {% endblock %}
