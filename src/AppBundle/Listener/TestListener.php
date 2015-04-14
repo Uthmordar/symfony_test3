@@ -21,8 +21,10 @@ class TestListener{
             $visit->setUrl($request->getRequestUri());
             $visit->setDate(new \Datetime());
 
-            $em->persist($visit);
-            $em->flush();
+            if(strstr($visit->getUrl(), "_wdt")==false && strstr($visit->getUrl(), '.css')==false){
+                $em->persist($visit);
+                $em->flush();
+            }
         }
     }
 }
