@@ -35,4 +35,11 @@ class ImageController extends Controller{
         
         return $this->render('image/create.html.twig', $params);
     }
+    
+    /**
+     * @Route("/translate", name="translate")
+     */
+    public function tradPage(){
+         return $this->render('default/index.html.twig'); 
+    }
 }
