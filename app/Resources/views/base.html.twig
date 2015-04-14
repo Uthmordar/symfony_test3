@@ -6,6 +6,7 @@
         {% stylesheets "css/*" 
             output="compiled/css/all.css" 
             filter="cssrewrite" %}
+           <!-- filter="uglifycss" --> 
             {% block stylesheets %}
                 <link rel="stylesheet" type="text/css" href="{{ asset_url }}"/>
             {% endblock %}
